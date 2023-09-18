@@ -23,3 +23,11 @@ https://github.com/FrontendMasters/grid-flexbox-v2/tree/main/day-1-flexbox/1-fle
 ## Game flexbox for practice:
 
 http://www.flexboxdefense.com/
+
+## Lesson 1 flexbox:
+
+https://frontendmasters.github.io/grid-flexbox-v2/intro
+
+## Codepen start:
+
+https://codepen.io/jen4web/pen/yLbjKWm?editors=1100
