@@ -37,7 +37,8 @@ li {
   /* min-width: 100px; */
   height: 100px;
   order: 1;
-  flex-basis: 10%;
+  width: 30%;
+  flex-grow: 2;
 }
 
 .flex2 {
