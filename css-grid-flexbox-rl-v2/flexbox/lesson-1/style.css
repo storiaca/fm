@@ -34,6 +34,13 @@ ul {
 li {
   border: 2px solid #001219;
   background-color: #ee9800;
-  min-width: 100px;
+  /* min-width: 100px; */
   height: 100px;
+  order: 1;
+  flex-basis: 10%;
+}
+
+.flex2 {
+  order: 2;
+  flex-basis: 25%;
 }
