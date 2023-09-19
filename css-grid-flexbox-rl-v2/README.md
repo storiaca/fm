@@ -39,3 +39,7 @@ https://frontendmasters.github.io/grid-flexbox-v2/flexbox-grid-system
 ## Codepen start:
 
 https://codepen.io/jen4web/pen/OJmEmKb?editors=1100
+
+## Add=on for firefox for viewport dimensions:
+
+https://addons.mozilla.org/en-US/firefox/addon/px-viewport-dimensions/
