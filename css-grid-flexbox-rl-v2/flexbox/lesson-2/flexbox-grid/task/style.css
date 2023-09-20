@@ -1,7 +1,26 @@
 .row {
   min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+figure {
+  flex-basis: 32%;
+}
+
+@media (min-width: 850px) {
+  .row {
+    justify-content: center;
+    align-content: flex-end;
+    gap: 2%;
+  }
+  figure {
+    flex-basis: 18.4%;
+  }
+}
 /* default styling, no changes needed here, even with responsive design */
 
 /* set the layout to border box model */
