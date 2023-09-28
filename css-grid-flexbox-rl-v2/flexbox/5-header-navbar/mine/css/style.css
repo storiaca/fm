@@ -67,7 +67,13 @@ nav ul {
   padding: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: space-between;
+}
+
+nav li {
+  flex-basis: 48%;
+  margin-bottom: 0.5rem;
 }
 
 nav li:first-child {
@@ -82,9 +88,21 @@ nav li:first-child {
 nav a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--color1);
+  color: white;
+  background-color: var(--color10);
   display: block;
   padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: var(--color1);
+  color: var(--color5);
+}
+
+nav li:first-child a {
+  background-color: transparent;
 }
 
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
