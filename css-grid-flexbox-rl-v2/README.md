@@ -55,3 +55,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source
 ## Srcset and sizes
 
 https://ericportis.com/posts/2014/srcset-sizes/
+
+## Responsive breakpoints:
+
+https://responsivebreakpoints.com/
