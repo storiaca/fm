@@ -40,6 +40,18 @@ https://frontendmasters.github.io/grid-flexbox-v2/flexbox-grid-system
 
 https://codepen.io/jen4web/pen/OJmEmKb?editors=1100
 
-## Add=on for firefox for viewport dimensions:
+## Add-on for firefox for viewport dimensions:
 
 https://addons.mozilla.org/en-US/firefox/addon/px-viewport-dimensions/
+
+## Smashed almanac:
+
+https://almanac.httparchive.org/en/2019/media
+
+## Source element
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source
+
+## Srcset and sizes
+
+https://ericportis.com/posts/2014/srcset-sizes/
