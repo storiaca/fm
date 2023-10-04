@@ -1,18 +1,48 @@
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  gap: 4%;
+@media (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1% 2%;
+  }
+  figure {
+    grid-column: span 2;
+  }
+  .span3,
+  .span1-lg,
+  .span4-md {
+    grid-column: span 4;
+  }
+  .span4 {
+    grid-column: span 4;
+  }
 }
 
-.span2 {
-  grid-column: span 2;
-}
-.span3 {
-  grid-column: span 3;
-}
-.span4 {
-  grid-column: span 4;
+@media (min-width: 1000px) {
+  .wrapper {
+    gap: 4%;
+  }
+  figure,
+  .span1-lg {
+    grid-column: span 1;
+  }
+  .span2,
+  .span4-md {
+    grid-column: span 2;
+  }
+  .span3 {
+    grid-column: span 3;
+  }
+
+  .order2 {
+    order: 2;
+  }
+  .order1 {
+    order: 1;
+  }
+  .order3 {
+    order: 3;
+  }
 }
 
 /* default styling, no changes needed here */
