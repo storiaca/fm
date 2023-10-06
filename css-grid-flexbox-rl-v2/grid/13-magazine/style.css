@@ -10,7 +10,36 @@ figcaption {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     gap: 1%;
+    grid-template-areas:
+      'featured featured featured featured'
+      '... ... main main';
   }
+}
+/* ovo je da sadrzaj sa ovom klasom bude na pocetku sadrzaja */
+/* .featured {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+} */
+/* .top {
+  z-index: 2;
+} */
+
+/* .featured {
+  grid-row: span 2;
+  grid-column: span 2;
+} */
+
+.featured {
+  grid-area: featured;
+}
+
+.main {
+  grid-area: main;
+}
+
+.middle {
+  grid-row: span 2;
+  grid-column: span 2;
 }
 
 /* default styling, no changes needed here */
