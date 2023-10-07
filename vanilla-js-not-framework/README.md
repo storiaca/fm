@@ -20,7 +20,7 @@ https://firtman.github.io/vanilla/slides.pdf
 
 http://vanilla-js.com/
 
-## Latesr framework benchmark:
+## Latest framework benchmark:
 
 https://krausest.github.io/js-framework-benchmark/current.html
 
@@ -35,3 +35,7 @@ https://developer.mozilla.org/en-US/docs/Web/API
 ## MDN Append child:
 
 https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+## W3C validator:
+
+https://validator.w3.org/
