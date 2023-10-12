@@ -1,5 +1,13 @@
 # Vanilla JS: You Might Not Need a Framework
 
+## npm serve
+
+https://www.npmjs.com/package/serve
+
+## run files with command:
+
+npx serve
+
 ## Link od kursa:
 
 https://frontendmasters.com/courses/vanilla-js-apps/what-is-vanilla-javascript/
