@@ -1,5 +1,9 @@
 export class OrderPage extends HTMLElement {
-
+  #user = {
+    name: "",
+    phone: "",
+    email: ""
+  }
   constructor() {
       super();
   
