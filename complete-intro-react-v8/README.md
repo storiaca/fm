@@ -19,3 +19,11 @@ https://github.com/btholt/complete-intro-to-react-v8/issues
 ## Github example project:
 
 https://github.com/btholt/citr-v8-project
+
+## Vite:
+
+https://vitejs.dev/
+
+## Rollup.js
+
+https://rollupjs.org/
