@@ -19,7 +19,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <AdoptedPetContext value={adoptedPet}>
+        <AdoptedPetContext.Provider value={adoptedPet}>
           <header>
             <Link to="/">Adopt Me!</Link>
           </header>
@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/details/:id" element={<Details />} />
             <Route path="/" element={<SearchParams />} />
           </Routes>
-        </AdoptedPetContext>
+        </AdoptedPetContext.Provider>
       </QueryClientProvider>
     </BrowserRouter>
   );
