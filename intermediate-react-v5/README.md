@@ -15,3 +15,7 @@ https://github.com/btholt/citr-v8-project
 ## Primer od predavanja:
 
 https://react-v8.holt.courses/lessons/hooks-in-depth/useref
+
+## Tailwind configuration:
+
+https://tailwindcss.com/docs/configuration
