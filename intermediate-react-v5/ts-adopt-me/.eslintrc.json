@@ -17,9 +17,9 @@
   "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "ecmaVersion": 2023,
+    "ecmaVersion": 2022,
     "sourceType": "module",
+    "project": "tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     }
