@@ -4,15 +4,16 @@ import AdoptedPetContext from "./AdoptedPetContext";
 import fetchSearch from "./fetchSearch";
 import Results from "./Results";
 import useBreedList from "./useBreedList";
+import { Animal } from "./APIResponsesTypes";
 
-const ANMIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
+const ANMIMALS: Animal[] = ["bird", "cat", "dog", "rabbit", "reptile"];
 const SearchParams = () => {
   const [requestParams, setRequestParams] = useState({
     location: "",
-    animal: "",
+    animal: "" as Animal,
     breed: "",
   });
-  const [animal, setAnimal] = useState("");
+  const [animal, setAnimal] = useState("" as Animal);
   const [breeds] = useBreedList(animal);
   const [adoptedPet] = useContext(AdoptedPetContext);
 
@@ -24,11 +25,12 @@ const SearchParams = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          const formData = new FormData(e.target);
+          const formData = new FormData(e.currentTarget);
           const obj = {
-            animal: formData.get("animal") ?? "",
-            location: formData.get("location") ?? "",
-            breed: formData.get("breed") ?? "",
+            animal:
+              (formData.get("animal")?.toString() as Animal) ?? ("" as Animal),
+            location: formData.get("location")?.toString() ?? "",
+            breed: formData.get("breed")?.toString() ?? "",
           };
 
           setRequestParams(obj);
@@ -50,7 +52,10 @@ const SearchParams = () => {
             value={animal}
             id="animal"
             onChange={(e) => {
-              setAnimal(e.target.value);
+              setAnimal(e.target.value as Animal);
+            }}
+            onBlur={(e) => {
+              setAnimal(e.target.value as Animal);
             }}
           >
             <option value=""></option>
