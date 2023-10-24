@@ -1,6 +1,6 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import AdoptedPetContext from "./AdoptedPetContext";
+import { useSelector } from "react-redux";
 import fetchSearch from "./fetchSearch";
 import Results from "./Results";
 import useBreedList from "./useBreedList";
@@ -14,7 +14,7 @@ const SearchParams = () => {
   });
   const [animal, setAnimal] = useState("");
   const [breeds] = useBreedList(animal);
-  const [adoptedPet] = useContext(AdoptedPetContext);
+  const adoptedPet = useSelector((state) => state.adoptedPet.value);
 
   const results = useQuery(["search", requestParams], fetchSearch);
   const pets = results?.data?.pets ?? [];
