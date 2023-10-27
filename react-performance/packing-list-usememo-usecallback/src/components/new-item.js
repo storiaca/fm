@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 
 const NewItem = ({ addItem }) => {
   const [newItemName, setNewItemName] = useState('');
@@ -37,4 +37,4 @@ const NewItem = ({ addItem }) => {
   );
 };
 
-export default NewItem;
+export default memo(NewItem);
