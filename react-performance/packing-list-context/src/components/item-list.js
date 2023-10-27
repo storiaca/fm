@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { filterItems } from '../lib/items';
 import { toKebabCase } from '../lib/kebab-case';
 import Item from './item';
@@ -45,4 +45,4 @@ const ItemList = ({ title = 'Items', items}) => {
   );
 };
 
-export default ItemList;
+export default memo(ItemList);

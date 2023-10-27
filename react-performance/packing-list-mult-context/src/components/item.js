@@ -1,12 +1,13 @@
 import clsx from 'clsx';
 import { useState, useContext } from 'react';
-import { updateItem } from '../lib/items';
 import { remove, update } from '../lib/reducer';
-import { ItemsContext } from '../context';
+import { ActionsContext } from '../context';
+import { useActions } from '../hooks';
 
 const Item = ({ item }) => {
   const [editing, setEditing] = useState(false);
-  const {dispatch} = useContext(ItemsContext)
+  const dispatch = useActions();
+  
   return (
     <li className="flex items-center gap-2">
       <input
