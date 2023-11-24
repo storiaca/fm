@@ -11,3 +11,7 @@ https://scottmoss.notion.site/scottmoss/Intro-to-Next-js-V3-6cefbdba58d94e3897dc
 ## Link github-a:
 
 https://github.com/Hendrixer/intro-nextjs-v3
+
+## Next.js docs
+
+https://nextjs.org/docs
