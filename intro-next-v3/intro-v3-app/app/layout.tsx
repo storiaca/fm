@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Navigation from './components/Navigation';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
-        <h1>Layout</h1>
+        <Navigation />
         <div>{children}</div>
       </body>
     </html>
