@@ -23,3 +23,7 @@ https://github.com/css-modules/css-modules
 ## CSS-in-JS
 
 https://nextjs.org/docs/app/building-your-application/styling/css-in-js
+
+## fetch()
+
+https://nextjs.org/docs/app/api-reference/functions/fetch
