@@ -15,3 +15,7 @@ https://github.com/Hendrixer/intro-nextjs-v3
 ## Next.js docs
 
 https://nextjs.org/docs
+
+## CSS Modules
+
+https://github.com/css-modules/css-modules
