@@ -27,3 +27,11 @@ https://nextjs.org/docs/app/building-your-application/styling/css-in-js
 ## fetch()
 
 https://nextjs.org/docs/app/api-reference/functions/fetch
+
+## Prisma
+
+https://www.prisma.io/
+
+## UUID Mdn
+
+https://developer.mozilla.org/en-US/docs/Glossary/UUID
