@@ -35,3 +35,7 @@ https://www.prisma.io/
 ## UUID Mdn
 
 https://developer.mozilla.org/en-US/docs/Glossary/UUID
+
+## For prisma db
+
+npx prisma studio

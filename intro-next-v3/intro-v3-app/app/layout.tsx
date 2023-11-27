@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         <Navigation />
-        <div>{children}</div>
+        <div className="max-w-[1200px] m-auto">{children}</div>
       </body>
     </html>
   );
