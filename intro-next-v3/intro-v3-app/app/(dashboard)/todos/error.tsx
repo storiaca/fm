@@ -1,7 +1,7 @@
 'use client';
 
-const ErrorUI = () => {
-  return <div>...ooops</div>;
+const ErrorUI = ({ error }) => {
+  return <div>...oooops</div>;
 };
 
 export default ErrorUI;
