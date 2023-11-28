@@ -39,3 +39,7 @@ https://developer.mozilla.org/en-US/docs/Glossary/UUID
 ## For prisma db
 
 npx prisma studio
+
+## Request Mdn
+
+https://developer.mozilla.org/en-US/docs/Web/API/Request
