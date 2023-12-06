@@ -1,16 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useReducer, useState } from 'react';
+
+const reducer = (count: number, newValue: number) => {
+  return newValue;
+};
+
+type ReducerState = ReturnType<typeof reducer>;
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useReducer(reducer, 0);
   const [draftCount, setDraftCount] = useState(count);
 
   // useEffect(() => {
   //   setDraftCount(count);
   // }, [count]);
 
-  useEffect(() => {
-    count;
-  }, [count]);
+  // useEffect(() => {
+  //   count;
+  // }, [count]);
 
   return (
     <section className="flex w-2/3 flex-col items-center gap-8 border-4 border-primary-500 bg-white p-8 shadow-lg">
