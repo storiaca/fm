@@ -10,7 +10,16 @@ const initialState: InitialState = {
   draftCount: 0,
 };
 
-const reducer = (state = initialState, action: any) => {
+type Action = {
+  type: 'increment' | 'decrement' | 'reset' | 'updateCountFromDraft';
+};
+
+type ActionWithPayload = {
+  type: 'updateDraftCount';
+  payload: number;
+};
+
+const reducer = (state = initialState, action: Action | ActionWithPayload) => {
   const { count, draftCount } = state;
 
   if (action.type === 'increment') {
