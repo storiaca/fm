@@ -21,7 +21,6 @@ export const fetchQuotes = async (count: number) => {
 
 const Application = () => {
   const [quotes, setQuotes] = useState<Quote[]>([]);
-  const [count, setCount] = useState(10);
 
   // useEffect(() => {
   //   fetchRandomQuote().then(setQuote);
@@ -31,7 +30,7 @@ const Application = () => {
   return (
     <main className="mx-auto w-full max-w-2xl py-16">
       {/* <InspirationalQuote content={quote.content} source={quote.source} /> */}
-      <Quotes count={count} onSubmit={() => fetchQuotes(count).then(setQuotes)}>
+      <Quotes setQuotes={setQuotes}>
         {quotes.map((quote) => {
           return (
             <InspirationalQuote
