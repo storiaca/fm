@@ -1,14 +1,13 @@
 import { MouseEventHandler, Dispatch } from 'react';
 import Button from '../shared/button';
 import ColorChangeSwatch from '../shared/color-change-swatch';
-import { AdjustColorActions } from '../../color-reducer';
 
 type SavedColorProps = {
   name: string;
   hexColor: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   onRemove?: () => void;
-  dispatch: Dispatch<AdjustColorActions>;
+  dispatch: Dispatch<ColorActions>;
 };
 
 const SavedColor = ({

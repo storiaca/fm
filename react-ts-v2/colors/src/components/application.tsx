@@ -1,12 +1,16 @@
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useContext } from 'react';
 import SavedColors from './saved-colors';
 import RelatedColors from './related-colors';
 import AdjustColors from './adjust-colors';
 import ColorPicker from './color-picker';
-import { colorReducer, initialState } from '../color-reducer';
+//import colorReducer, { initialState } from '../lib/color-reducer';
+import { ColorContext } from '../context';
 
 const Application = () => {
-  const [{ hexColor }, dispatch] = useReducer(colorReducer, initialState);
+  // const [state, dispatch] = useReducer(colorReducer, initialState);
+  // const hexColor = state.hexColor;
+
+  const { hexColor, dispatch } = useContext(ColorContext);
 
   return (
     <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 p-8 pb-40 dark:bg-slate-900 dark:text-white sm:grid-cols-2">

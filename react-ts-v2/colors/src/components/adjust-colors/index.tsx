@@ -4,11 +4,10 @@ import HexToCMYK from './to-cmyk';
 import HexToHSL from './to-hsl';
 import HexToHSV from './to-hsv';
 import HexToRGB from './to-rgb';
-import { AdjustColorActions } from '../../color-reducer';
 
 export type AdjustColorsProps = {
   hexColor: string;
-  dispatch: Dispatch<AdjustColorActions>;
+  dispatch: Dispatch<ColorActions>;
 };
 
 const AdjustColors = ({ hexColor, dispatch }: AdjustColorsProps) => {
