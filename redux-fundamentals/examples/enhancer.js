@@ -10,8 +10,10 @@ const reducer = (state = { count: 1 }) => state;
 const monitorEnhancer = (createStore) => (reducer, initialState, enhancer) => {
   const monitoredReducer = (state, action) => {
     const start = performance.now();
+    console.log(start);
     const newState = reducer(state, action);
     const end = performance.now();
+    console.log(end);
     const diff = end - start;
     console.log(diff);
     return newState;
