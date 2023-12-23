@@ -20,5 +20,6 @@ export const humanSlice = createSlice({
     add: (state, action) => {
       state.push(createHuman(action.payload));
     }
-  }
+  },
+  extraReducers: {}
 });
