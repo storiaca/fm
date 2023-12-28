@@ -21,7 +21,7 @@ type CounterAction =
 
 const counterReducer = createReducer({ count: 0 }, (builder) => {
   builder.addCase(increment, (state, action) => {
-    state.count++;
+    state.count += action.payload;
   });
 });
 
