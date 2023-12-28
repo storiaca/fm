@@ -1,4 +1,4 @@
-import { createAction } from '@reduxjs/toolkit';
+import { createAction, createReducer } from '@reduxjs/toolkit';
 
 type CounterState = { count: number };
 
@@ -18,6 +18,12 @@ type CounterAction =
   | ReturnType<typeof increment>
   | ReturnType<typeof decrement>
   | ReturnType<typeof reset>;
+
+const counterReducer = createReducer({ count: 0 }, (builder) => {
+  builder.addCase(increment, (state, action) => {
+    state.count++;
+  });
+});
 
 export const reducer = (state: CounterState, action: CounterAction) => {
   if (action.type === increment.type) {
