@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addTask } from '../features/tasks-slice';
 
 const CreateTask = () => {
   const [newTaskTitle, setnewTaskTitle] = useState('');
@@ -9,6 +10,7 @@ const CreateTask = () => {
       className="create-task"
       onSubmit={(e) => {
         e.preventDefault();
+        dispatch(addTask({ title: newTaskTitle }));
       }}
     >
       <label htmlFor="new-task-title">
