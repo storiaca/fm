@@ -5,7 +5,12 @@ export type TasksState = {
 };
 
 // type DraftTask = Partial<Task>;
-type DraftTask = Pick<Task, 'title'>;
+// type DraftTask = Pick<Task, 'title'>;
+type DraftTask = RequireOnly<Task, 'title'>;
+
+// type FunExperimantalType = RequireOnly<Task, 'title' | 'id'>;
+
+// const miniTask: FunExperimantalType = { title: 'lol', id: '2345' };
 
 const createTask = (draftTask: DraftTask): Task => {
   return { id: nanoid(), ...draftTask };
