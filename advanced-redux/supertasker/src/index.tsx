@@ -4,6 +4,9 @@ import Application from './components/application';
 
 import { makeServer } from './api';
 
+import { Provider } from 'react-redux';
+import store from './store';
+
 import ApplicationContext from './context';
 import data from './api/data.json';
 import './index.css';
@@ -18,7 +21,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ApplicationContext.Provider value={data}>
-      <Application />
+      <Provider store={store}>
+        <Application />
+      </Provider>
     </ApplicationContext.Provider>
   </React.StrictMode>,
 );
