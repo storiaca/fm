@@ -13,7 +13,7 @@ type DraftTask = RequireOnly<Task, 'title'>;
 
 // const miniTask: FunExperimantalType = { title: 'lol', id: '2345' };
 
-const createTask = (draftTask: DraftTask): Task => {
+export const createTask = (draftTask: DraftTask): Task => {
   return { id: nanoid(), ...draftTask };
 };
 
