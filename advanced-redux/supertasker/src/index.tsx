@@ -10,9 +10,12 @@ import store from './store';
 import ApplicationContext from './context';
 import data from './api/data.json';
 import './index.css';
+import { fetchTasks } from './features/tasks-slice';
 
 const environment = process.env.NODE_ENV;
 makeServer({ environment });
+
+store.dispatch(fetchTasks());
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
