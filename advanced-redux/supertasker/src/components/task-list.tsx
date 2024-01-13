@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import ApplicationContext from '../context';
 import Task from './task';
+import Loading from './loading';
 import { useSelector } from 'react-redux';
 import { ApplicationState } from '../store';
-import { useAppSelector } from '../hooks';
+import { useAppSelector, useTasks } from '../hooks';
 
 const TaskList = () => {
   // const { tasks } = useContext(ApplicationContext);
@@ -13,10 +14,11 @@ const TaskList = () => {
   // );
   // const tasks = useSelector((state: ApplicationState) => state.tasks.entities);
 
-  const tasks = useAppSelector((state) => state.tasks.entities);
+  const [tasks, loading] = useTasks();
 
   return (
     <section className="task-list">
+      <Loading loading={loading} />
       {tasks && tasks.map((task) => <Task key={task.id} task={task} />)}
     </section>
   );
