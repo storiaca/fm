@@ -5,9 +5,11 @@ export const itemApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
   endpoints: (builder) => {
     return {
-      getItems: builder.query<Item[], void>({
+      getItems: builder.query<{ items: Item[] }, void>({
         query: () => 'items',
       }),
     };
   },
 });
+
+export const { useGetItemsQuery } = itemApi;
