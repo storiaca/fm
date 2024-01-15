@@ -1,7 +1,9 @@
+//import { initializeCounter } from './counter';
 console.log('hello from index.js');
 
-import { initializeCounter } from './counter';
+import('./counter').then(({ initializeCounter }) => {
+  initializeCounter();
+});
+// initializeCounter();
 
-initializeCounter();
-
-document.querySelector('h2').textContent = 'Hello from index.js';
+// document.querySelector('h2').textContent = 'Hello from index.js';
