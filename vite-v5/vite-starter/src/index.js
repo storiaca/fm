@@ -1,6 +1,9 @@
 //import { initializeCounter } from './counter';
 import image from './steve-after-a-workshop.jpg';
-console.log(image);
+import favicon from './favicon.png';
+
+console.log(image, favicon);
+
 console.log('hello from index.js');
 
 import('./counter').then(({ initializeCounter }) => {
