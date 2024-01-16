@@ -9,7 +9,7 @@
 // console.log(webp);
 // console.log(jpg);
 
-console.log(import.meta.env);
+// console.log(import.meta.env);
 
 // const img = document.createElement('img');
 // img.src = image;
@@ -24,3 +24,8 @@ import('./counter').then(({ initializeCounter }) => {
 // initializeCounter();
 
 // document.querySelector('h2').textContent = 'Hello from index.js';
+
+// import gandorf from './characters/gandorf.json';
+import { name } from './characters/gandorf.json';
+
+console.log(name);
