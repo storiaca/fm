@@ -1,4 +1,5 @@
 //import { initializeCounter } from './counter';
+import styles from './banner.modul.css?url';
 import webp from './steve-after-a-workshop.jpg?h=400;800&format=webp&as=metadata';
 import jpg from './steve-after-a-workshop.jpg?h=400&as=metadata';
 
@@ -7,6 +8,8 @@ import jpg from './steve-after-a-workshop.jpg?h=400&as=metadata';
 
 console.log(webp);
 console.log(jpg);
+
+console.log(styles);
 
 const img = document.createElement('img');
 img.src = image;
