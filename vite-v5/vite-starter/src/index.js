@@ -25,7 +25,26 @@ import('./counter').then(({ initializeCounter }) => {
 
 // document.querySelector('h2').textContent = 'Hello from index.js';
 
+/* JSON Named Exports */
 // import gandorf from './characters/gandorf.json';
-import { name } from './characters/gandorf.json';
+// import { name } from './characters/gandorf.json';
 
-console.log(name);
+// console.log(name);
+
+/* Glob Imports */
+const content = document.querySelector('#content');
+
+console.log(import.meta.glob('./logos/**/*.svg', { eager: true }));
+
+// for (const [path, module] of Object.entries(
+//   import.meta.glob('./logos/**/*.svg'),
+// )) {
+//   //module().then((img) => console.log(img.default));
+
+//   module().then((url) => {
+//     const img = document.createElement('img');
+//     img.src = url.default;
+//     img.height = 200;
+//     content.appendChild(img);
+//   });
+// }
