@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+## For installing plug-in from vite-components
+
 ```bash
 npm link ../vite-components/
 ```

@@ -1,27 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import { resolve } from 'path';
-import dts from 'vite-plugin-dts';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import federation from '@originjs/vite-plugin-federation';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss(), dts({ include: ['src/components'] })],
-  build: {
-    copyPublicDir: false,
-    lib: {
-      entry: resolve(__dirname, 'src/components/index.ts'),
-      name: 'FrontendMastersTotallyAwesomeSystem',
-      fileName: 'fends',
-    },
-    rollupOptions: {
-      external: ['recat', 'react-dom', 'react/jsx-runtime'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
+  plugins: [
+    react(),
+    federation({
+      name: 'fem-components',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './button': './src/components/button.tsx',
+        './input': './src/components/input.tsx',
       },
-    },
+      shared: ['react', 'react-dom'],
+    }),
+  ],
+  build: {
+    target: 'esnext',
   },
 });
