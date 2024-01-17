@@ -5,7 +5,7 @@ import './App.css';
 
 import { lazy } from 'react';
 
-const Button = lazy(() => import 'fends/button')
+const Button = lazy(() => import('fends/button'));
 
 // import * as components from 'vite-components';
 //import { Button, Input } from 'vite-components';
@@ -37,8 +37,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>*/}
       {/* <Button dangerous>Button</Button>
-      <Input /> */} 
-      
+      <Input /> */}
     </Suspense>
   );
 }
