@@ -3,6 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/fends.umd.cjs",
+  "module": "./dist/fends.js",
+  "exports": {
+    ".": {
+      "import": "./dist/fends.js",
+      "require": "./dist/fends.umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
