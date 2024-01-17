@@ -5,7 +5,7 @@ import { readFile } from 'fs/promises';
 const md = new Markdown();
 
 const renderMarkdown = async (file) => {
-  const content = readFile(file, 'utf-8');
+  const content = await readFile(file, 'utf-8');
   return md.render(content);
 };
 
