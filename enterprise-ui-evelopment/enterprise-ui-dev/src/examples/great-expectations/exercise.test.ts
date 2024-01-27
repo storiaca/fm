@@ -51,9 +51,10 @@ describe('Kanban Board', () => {
 
     expect(board.statuses).toContain(status);
 
-    await board.removeStatus(status);
+    const returnValue = board.removeStatus(status);
 
     expect(board.statuses).not.toContain(status);
+    expect(returnValue).rejects.toBe(4);
   });
 });
 
