@@ -40,7 +40,30 @@ it('enables the "Add New Item" button when there is text in the input field', as
   expect(addNewItemButton).toBeEnabled();
 });
 
-it.todo(
-  'adds a new item to the unpacked item list when the clicking "Add New Item"',
-  async () => {},
-);
+it('adds a new item to the unpacked item list when the clicking "Add New Item"', async () => {
+  const { user } = render(<PackingList />);
+  const newItemInput = screen.getByLabelText('New Item Name');
+  const addNewItemButton = screen.getByRole('button', {
+    name: 'Add New Item',
+  });
+
+  await user.type(newItemInput, 'iPad Pro');
+  await user.click(addNewItemButton);
+
+  expect(screen.getByLabelText('iPad Pro')).not.toBeChecked();
+});
+
+it('Remove an Item"', async () => {
+  const { user } = render(<PackingList />);
+  const newItemInput = screen.getByLabelText('New Item Name');
+  const addNewItemButton = screen.getByRole('button', {
+    name: 'Add New Item',
+  });
+
+  await user.type(newItemInput, 'MacBook Pro');
+  await user.click(addNewItemButton);
+
+  const removeItem = screen.getByLabelText('Remove');
+
+  await user.click(removeItem);
+});
