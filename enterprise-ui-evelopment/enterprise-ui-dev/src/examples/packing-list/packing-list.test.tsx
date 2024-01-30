@@ -1,3 +1,5 @@
+// @vitest-environment jsdom
+
 import { render, screen } from 'test/utilities';
 import PackingList from '.';
 
@@ -10,7 +12,10 @@ it('has the correct title', async () => {
   screen.getByText('Packing List');
 });
 
-it.todo('has an input field for a new item', () => {});
+it('has an input field for a new item', () => {
+  render(<PackingList />);
+  screen.getByLabelText('New Item Name');
+});
 
 it.todo(
   'has a "Add New Item" button that is disabled when the input is empty',
