@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { render, screen } from 'test/utilities';
+import { render, screen, waitFor } from 'test/utilities';
 import PackingList from '.';
 
 it('renders the Packing List application', () => {
@@ -60,10 +60,12 @@ it('Remove an Item"', async () => {
     name: 'Add New Item',
   });
 
-  await user.type(newItemInput, 'MacBook Pro');
+  await user.type(newItemInput, 'iPad Pro');
   await user.click(addNewItemButton);
 
   const removeItem = screen.getByLabelText('Remove');
 
   await user.click(removeItem);
+
+  await waitFor(() => expect(removeItem).not.toBeInTheDocument());
 });
