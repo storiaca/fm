@@ -1,9 +1,22 @@
 // @vitest-environment jsdom
 
-import { render, screen, waitFor } from 'test/utilities';
-import PackingList from '.';
+import { render as _render, screen, waitFor } from 'test/utilities';
+import { PackingList } from '.';
+import { createStore } from './store';
+import { Provider } from 'react-redux';
+import { PropsWithChildren } from 'react';
 
-it('renders the Packing List application', () => {
+const render: typeof _render = (Component, options) => {
+  const store = createStore();
+
+  const Wrapper = ({ children }: PropsWithChildren) => {
+    return <Provider store={store}>{children}</Provider>;
+  };
+
+  return _render(Component, { ...options, wrapper: Wrapper });
+};
+
+it.only('renders the Packing List application', () => {
   render(<PackingList />);
 });
 
@@ -63,7 +76,7 @@ it('Remove an Item"', async () => {
   await user.type(newItemInput, 'iPad Pro');
   await user.click(addNewItemButton);
 
-  const removeItem = screen.getByLabelText('Remove');
+  const removeItem = screen.getByLabelText(/remove/i);
 
   await user.click(removeItem);
 
