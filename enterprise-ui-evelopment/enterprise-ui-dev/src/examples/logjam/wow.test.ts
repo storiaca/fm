@@ -1,6 +1,12 @@
 import { test, expect, vi } from 'vitest';
 import { log } from './log';
 
+// vi.mock('axios');
+vi.mock('./your/code/somewhere');
+vi.mock('vitest', (args) => {
+  return {};
+});
+
 test('it spies on the multiply method', () => {
   const mock = vi.fn((x?: string) => {
     if (x) {
