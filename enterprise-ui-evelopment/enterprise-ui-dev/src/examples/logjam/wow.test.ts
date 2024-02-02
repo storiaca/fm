@@ -12,7 +12,10 @@ test('it spies on the multiply method', () => {
   mock();
   const result = mock('wow');
 
+  vi.spyOn(console, 'log').mockImplementation(() => {});
+  log('log', 1, 2, 3);
   //expect(mock).toHaveBeenCalled();
   expect(mock).toHaveBeenLastCalledWith('wow');
   expect(result).toMatchInlineSnapshot('"wowwowwow"');
+  expect(console.log).toHaveBeenCalledWith(1, 2, 3);
 });
